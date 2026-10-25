@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp" android:height="96dp" android:viewportWidth="96" android:viewportHeight="96">
+    <path
+        android:fillColor="@color/green_light"
+        android:pathData="M48,48m-46,0a46,46 0 1 0 92,0a46,46 0 1 0 -92,0" />
+    <group android:scaleX="2.6" android:scaleY="2.6" android:translateX="16.8" android:translateY="16.8">
+        <path
+            android:strokeColor="@color/green_primary"
+            android:strokeWidth="1.6"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:fillColor="@color/white"
+            android:pathData="M8,3h8a1,1 0 0 1 1,1v1.5a1,1 0 0 1 -1,1H8a1,1 0 0 1 -1,-1V4a1,1 0 0 1 1,-1zM7.5,6.5C5.7,7.4 5,8.6 5,10.5V18.5A2.5,2.5 0 0 0 7.5,21h9a2.5,2.5 0 0 0 2.5,-2.5V10.5C19,8.6 18.3,7.4 16.5,6.5z" />
+        <path
+            android:fillColor="@color/green_container"
+            android:pathData="M9,12h6a1,1 0 0 1 1,1v3a1,1 0 0 1 -1,1H9a1,1 0 0 1 -1,-1v-3a1,1 0 0 1 1,-1z" />
+    </group>
+    <!-- Little sparkle -->
+    <path
+        android:fillColor="@color/saffron"
+        android:pathData="M74,20l2,5.5l5.5,2l-5.5,2l-2,5.5l-2,-5.5l-5.5,-2l5.5,-2z" />
+</vector>

@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp" android:height="20dp" android:viewportWidth="24" android:viewportHeight="24">
+    <!-- Clock face + hands, drawn in brand green (used in the recipe meta chip) -->
+    <path
+        android:strokeColor="@color/green_primary"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M12,12m-8.5,0a8.5,8.5 0 1 0 17,0a8.5,8.5 0 1 0 -17,0M12,7.5V12l3,2" />
+</vector>
