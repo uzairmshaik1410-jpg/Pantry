@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- ===== Brand: "Herb & Cream" ===== -->
     <color name="white">#FFFFFFFF</color>
-    <color name="green_primary">#2E7D32</color>
-    <color name="green_dark">#1B5E20</color>
-    <color name="green_container">#DCEFD8</color>
-    <color name="background">#F7F9F5</color>
-    <color name="orange">#E65100</color>
-    <color name="amber_light">#FFF3CD</color>
-    <color name="amber_text">#8A5A00</color>
-    <color name="red">#C62828</color>
-    <color name="grey">#6B7280</color>
-    <color name="text_dark">#1F2937</color>
+    <color name="green_primary">#1E7B57</color>
+    <color name="green_dark">#0D3B2B</color>
+    <color name="green_container">#D3EEDF</color>
+    <color name="green_light">#EBF6F0</color>
+
+    <!-- Warm accent (saffron) used for recipe highlights -->
+    <color name="saffron">#F2B138</color>
+    <color name="saffron_container">#FFE7B0</color>
+    <color name="on_saffron">#4A3000</color>
+
+    <!-- ===== Surfaces ===== -->
+    <color name="background">#F7F5EF</color>
+    <color name="surface_variant">#EFEDE4</color>
+    <color name="outline_soft">#E3DFD2</color>
+    <color name="outline">#9AA39D</color>
+
+    <!-- ===== Status colours (used from Java, names must stay) ===== -->
+    <color name="orange">#AE4F06</color>
+    <color name="orange_container">#FFE6CC</color>
+    <color name="red">#B3261E</color>
+    <color name="red_container">#FCE4E1</color>
+
+    <!-- Expiry banner -->
+    <color name="amber_light">#FFF1D6</color>
+    <color name="amber_border">#F1D9A3</color>
+    <color name="amber_text">#6E4100</color>
+
+    <!-- ===== Text ===== -->
+    <color name="grey">#5F6B64</color>
+    <color name="text_dark">#17231D</color>
+
 </resources>

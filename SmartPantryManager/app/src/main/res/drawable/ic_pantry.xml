@@ -1,5 +1,16 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24"
     android:tint="?attr/colorControlNormal">
-    <path android:fillColor="#FF000000" android:pathData="M3,13h2v-2H3v2zM3,17h2v-2H3v2zM3,9h2V7H3v2zM7,13h14v-2H7v2zM7,17h14v-2H7v2zM7,7v2h14V7H7z" />
+    <!-- Storage jar: lid + shoulders + body -->
+    <path
+        android:strokeColor="#FF000000"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M8,3h8a1,1 0 0 1 1,1v1.5a1,1 0 0 1 -1,1H8a1,1 0 0 1 -1,-1V4a1,1 0 0 1 1,-1zM7.5,6.5C5.7,7.4 5,8.6 5,10.5V18.5A2.5,2.5 0 0 0 7.5,21h9a2.5,2.5 0 0 0 2.5,-2.5V10.5C19,8.6 18.3,7.4 16.5,6.5" />
+    <!-- Label (soft fill, stays translucent when tinted) -->
+    <path
+        android:fillColor="#FF000000"
+        android:fillAlpha="0.35"
+        android:pathData="M9,12h6a1,1 0 0 1 1,1v3a1,1 0 0 1 -1,1H9a1,1 0 0 1 -1,-1v-3a1,1 0 0 1 1,-1z" />
 </vector>

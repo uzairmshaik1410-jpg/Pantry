@@ -1,5 +1,44 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
     android:width="48dp" android:height="48dp" android:viewportWidth="48" android:viewportHeight="48">
-    <path android:fillColor="#2E7D32" android:pathData="M24,4C13,4 4,13 4,24s9,20 20,20 20,-9 20,-20S35,4 24,4z" />
-    <path android:fillColor="#FFFFFF" android:pathData="M20,32l-8,-8 2.8,-2.8L20,26.4l13.2,-13.2L36,16z" />
+
+    <!-- Rounded-square tile with a herb-green gradient -->
+    <path android:pathData="M12,0h24a12,12 0 0 1 12,12v24a12,12 0 0 1 -12,12H12A12,12 0 0 1 0,36V12A12,12 0 0 1 12,0z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="4" android:startY="2"
+                android:endX="44" android:endY="46"
+                android:type="linear">
+                <item android:color="#FF2F9A6B" android:offset="0.0" />
+                <item android:color="#FF0D4A35" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Soft highlight in the top-left -->
+    <path
+        android:fillColor="#1FFFFFFF"
+        android:pathData="M12,0h14C16,6 8,16 0,26V12A12,12 0 0 1 12,0z" />
+
+    <!-- Jar lid -->
+    <path
+        android:fillColor="#FFFFE7B0"
+        android:pathData="M17,9h14a1.5,1.5 0 0 1 1.5,1.5v2a1.5,1.5 0 0 1 -1.5,1.5H17a1.5,1.5 0 0 1 -1.5,-1.5v-2A1.5,1.5 0 0 1 17,9z" />
+
+    <!-- Jar body (cream) -->
+    <path
+        android:fillColor="#FFFFF8E8"
+        android:pathData="M16.5,15.5h15c2.2,0 4,1.8 4,4V35a5,5 0 0 1 -5,5h-13a5,5 0 0 1 -5,-5V19.5C12.5,17.3 14.3,15.5 16.5,15.5z" />
+
+    <!-- Sprouting leaf on the jar -->
+    <path
+        android:fillColor="#FF1E7B57"
+        android:pathData="M24,36C16.8,33.2 16.6,24.6 24,20.5C31.4,24.6 31.2,33.2 24,36z" />
+
+    <!-- Leaf vein -->
+    <path
+        android:strokeColor="#FFFFF8E8"
+        android:strokeWidth="1.4"
+        android:strokeLineCap="round"
+        android:pathData="M24,34V24.5M24,30.5l-2.6,-2.4M24,28l2.6,-2.4" />
 </vector>

@@ -3,93 +3,164 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     android:orientation="vertical">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
+        style="@style/Widget.SmartPantry.Toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/green_primary"
-        app:titleTextColor="@color/white"
-        app:navigationIconTint="@color/white"
+        android:layout_height="64dp"
         app:title="Settings" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:clipToPadding="false">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:paddingStart="16dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="24dp">
 
-            <com.google.android.material.materialswitch.MaterialSwitch
-                android:id="@+id/sw_alerts"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Expiring-soon alerts"
-                android:textSize="16sp" />
-
+            <!-- ===== Notifications & matching ===== -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:text="Show a banner on the pantry screen when items expire within 3 days."
-                android:textColor="@color/grey"
-                android:textSize="13sp" />
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="Alerts &amp; matching"
+                android:textAppearance="@style/TextAppearance.SmartPantry.SectionLabel" />
 
-            <com.google.android.material.materialswitch.MaterialSwitch
-                android:id="@+id/sw_ignore_expired"
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.SmartPantry.Card"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Ignore expired items in recipes"
-                android:textSize="16sp" />
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:text="Expired ingredients will not count towards recipe suggestions."
-                android:textColor="@color/grey"
-                android:textSize="13sp" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Default unit for new ingredients">
-
-                <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                    android:id="@+id/et_default_unit"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="none" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:orientation="vertical"
+                    android:padding="18dp">
 
-            <Button
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/sw_alerts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Expiring-soon alerts"
+                        android:textAppearance="@style/TextAppearance.SmartPantry.CardTitle"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="64dp"
+                        android:lineSpacingMultiplier="1.1"
+                        android:text="Show a banner on the pantry screen when items expire within 3 days."
+                        android:textAppearance="@style/TextAppearance.SmartPantry.Caption" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/outline_soft" />
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/sw_ignore_expired"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ignore expired items in recipes"
+                        android:textAppearance="@style/TextAppearance.SmartPantry.CardTitle"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="64dp"
+                        android:lineSpacingMultiplier="1.1"
+                        android:text="Expired ingredients will not count towards recipe suggestions."
+                        android:textAppearance="@style/TextAppearance.SmartPantry.Caption" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ===== Defaults ===== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="8dp"
+                android:text="Defaults"
+                android:textAppearance="@style/TextAppearance.SmartPantry.SectionLabel" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.SmartPantry.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.SmartPantry.TextInput.Dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="18dp"
+                    android:hint="Default unit for new ingredients">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/et_default_unit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ===== Data ===== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="8dp"
+                android:text="Data"
+                android:textAppearance="@style/TextAppearance.SmartPantry.SectionLabel" />
+
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_clear_pantry"
-                style="?attr/materialButtonOutlinedStyle"
+                style="@style/Widget.SmartPantry.Button.Danger"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_marginTop="32dp"
                 android:text="Clear entire pantry"
-                android:textColor="@color/red" />
+                app:icon="@drawable/ic_delete"
+                app:iconGravity="textStart"
+                app:iconPadding="10dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:gravity="center"
+                android:lineSpacingMultiplier="1.2"
                 android:text="Smart Pantry Manager v1.0\nMobile App Development 700"
-                android:textColor="@color/grey"
+                android:textAppearance="@style/TextAppearance.SmartPantry.Caption"
                 android:textSize="12sp" />
         </LinearLayout>
     </ScrollView>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/outline_soft" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
+        style="@style/Widget.SmartPantry.BottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_nav" />

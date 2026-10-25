@@ -3,89 +3,119 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     android:orientation="vertical">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
+        style="@style/Widget.SmartPantry.Toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/green_primary"
-        app:titleTextColor="@color/white"
-        app:navigationIconTint="@color/white"
+        android:layout_height="64dp"
         app:title="Recipe" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:clipToPadding="false">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:paddingStart="20dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="32dp">
 
             <TextView
                 android:id="@+id/tv_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_dark"
-                android:textSize="26sp"
-                android:textStyle="bold" />
+                android:textAppearance="@style/TextAppearance.SmartPantry.Headline" />
 
+            <!-- Meta chip: "25 min • 2 servings" -->
             <TextView
                 android:id="@+id/tv_meta"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textColor="@color/grey"
-                android:textSize="14sp" />
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_chip"
+                android:drawableStart="@drawable/ic_timer"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/green_dark"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:textColor="@color/text_dark"
-                android:textSize="16sp" />
+                android:layout_marginTop="16dp"
+                android:lineSpacingMultiplier="1.2"
+                android:textAppearance="@style/TextAppearance.SmartPantry.Body"
+                android:textColor="@color/grey" />
 
+            <!-- Ingredients -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="28dp"
                 android:text="Ingredients"
-                android:textColor="@color/green_dark"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textAppearance="@style/TextAppearance.SmartPantry.SectionTitle" />
 
             <TextView
                 android:id="@+id/tv_status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:textSize="13sp" />
+                android:textAppearance="@style/TextAppearance.SmartPantry.Status" />
 
-            <LinearLayout
-                android:id="@+id/ll_ingredients"
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.SmartPantry.Card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="vertical" />
+                android:layout_marginTop="12dp">
 
+                <LinearLayout
+                    android:id="@+id/ll_ingredients"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="18dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="18dp"
+                    android:paddingBottom="10dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Method -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="28dp"
                 android:text="Method"
-                android:textColor="@color/green_dark"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textAppearance="@style/TextAppearance.SmartPantry.SectionTitle" />
 
-            <LinearLayout
-                android:id="@+id/ll_steps"
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.SmartPantry.Card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="vertical" />
+                android:layout_marginTop="12dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_steps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="18dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="18dp"
+                    android:paddingBottom="10dp" />
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

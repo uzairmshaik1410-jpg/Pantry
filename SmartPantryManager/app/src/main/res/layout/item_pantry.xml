@@ -1,28 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="?attr/materialCardViewOutlinedStyle"
+    style="@style/Widget.SmartPantry.Card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp"
+    android:layout_marginBottom="10dp"
     android:clickable="true"
-    android:focusable="true"
-    app:cardBackgroundColor="@color/white"
-    app:cardCornerRadius="12dp">
+    android:focusable="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingStart="16dp"
-        android:paddingTop="12dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="12dp">
+        android:paddingStart="14dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="6dp"
+        android:paddingBottom="14dp">
+
+        <!-- Leading icon bubble -->
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_icon_bubble"
+            android:importantForAccessibility="no"
+            android:padding="12dp"
+            android:src="@drawable/ic_pantry"
+            app:tint="@color/green_primary" />
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -30,24 +39,23 @@
                 android:id="@+id/tv_item_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_dark"
-                android:textSize="17sp"
-                android:textStyle="bold" />
+                android:textAppearance="@style/TextAppearance.SmartPantry.CardTitle" />
 
             <TextView
                 android:id="@+id/tv_item_quantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:textColor="@color/text_dark"
+                android:textColor="@color/grey"
                 android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/tv_item_expiry"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textSize="13sp" />
+                android:layout_marginTop="6dp"
+                android:textSize="13sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <ImageButton
